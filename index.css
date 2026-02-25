@@ -697,7 +697,7 @@ header {
     content: "";
     position: absolute;
     top: 50%; 
-    left: 51%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 14px; height: 14px;
     background-color: #000;
@@ -720,7 +720,7 @@ header {
     content: "";
     position: absolute;
     top: 50%; 
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 14px; height: 14px;
     background-color: #000;
