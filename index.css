@@ -51,13 +51,11 @@ li {
     z-index: 99;
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
 }
-.custom-select:hover .currency-dropdown {
+.custom-select:hover .currency-dropdown,
+.currency-check:checked ~ .currency-dropdown {
     display: block;
     padding: 12px;
     cursor: default;
-}
-.currency-check:checked ~ .currency-dropdown {
-    display: flex;
 }
 
 .menu-toggle, .currency-check {
