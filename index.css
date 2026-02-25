@@ -856,7 +856,8 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        margin-right: -14px; /* 26px middle*/
+        /* margin-right: -14px;  */
+        /* 26px middle*/
     }
     .menu-toggle:checked + .hamberger svg:first-child {
         transform: translateY(5px) rotate(-45deg);
@@ -937,7 +938,8 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        margin-right: -14px; /* 26px middle*/
+        /* margin-right: -14px;  */
+        /* 26px middle*/
     }
     .menu-toggle:checked + .hamberger svg:first-child {
         transform: translateY(5px) rotate(-45deg);
