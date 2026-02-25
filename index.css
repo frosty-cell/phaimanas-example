@@ -808,7 +808,6 @@ footer {
 /* mobile L == 769px */
 @media screen and (max-width: 769px) {
     .currency-dropdown {
-        left: 17px;
         top: 30px;
     }
     
