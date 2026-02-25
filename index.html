@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example(Kittiphat Waengchaiyaphum)</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="center">
+        <div class="header">
+            <div class="currency-header">
+                <!-- <div class="custom-select">
+                    <div class="center currency">
+                        <span>TH - THB</span>
+                        <svg width="10" height="10" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.03109 3.75L9.53674e-07 0H6.06218L3.03109 3.75Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="center currency-dropdown">
+                        <span>US - USD</span>
+                    </div>
+                </div> -->
+                <div class="custom-select">
+                    <input type="checkbox" id="currency-inner-toggle" class="currency-check" hidden>
+
+                    <label class="center currency">
+                        <span>TH - THB</span>
+                        <svg width="10" height="10" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.03109 3.75L9.53674e-07 0H6.06218L3.03109 3.75Z" fill="black"/>
+                        </svg>
+                    </label>
+                    <div class="center currency-dropdown">
+                        <span>US - USD</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamberger">
+                <svg width="20" height="1" viewBox="0 0 20 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0.5H20" stroke="black"/>
+                </svg>
+                <svg width="20" height="1" viewBox="0 0 20 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0.5H20" stroke="black"/>
+                </svg>
+            </label>
+            <nav class="navbar-overlay">
+                <ul style="display: flex; flex-direction: column; margin-top: 16px; gap: 10px;">
+                    <li>WOMEN</li>
+                    <li>COLLECTIONS</li>
+                    <li class="editorial">
+                        <input type="checkbox" id="editorial-inner-toggle" class="editorial-check" hidden>
+                        <label for="editorial-inner-toggle" class="editorial-label">
+                            <span class="editorial-text">EDITORIAL</span>
+                            <span>▼</span>
+                        </label>
+                        
+                        <div class="editorial-toggle">
+                            <div style="overflow: hidden;">
+                                <ul style="padding: 10px 0 30px; gap: 10px; display: flex; flex-direction: column;">
+                                    <li>A.S.C</li>
+                                    <li>BAZAAR</li>
+                                    <li>ELLE</li>
+                                    <li>GQ</li>
+                                    <li>L'OFFICIAL THAILAND</li>
+                                    <li>MUNERO</li>
+                                    <li>VOGUE</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>NEWS</li>
+                    <li>STORIES</li>
+                </ul>
+                <div class="logo-containter-overlay">
+                    <svg viewBox="0 0 1402 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1360.37 101.887C1360.37 98.6645 1358.96 96.0867 1356.12 94.1533C1353.29 92.0911 1348.65 90.6089 1342.2 89.7067L1317.45 86.0333C1298.38 83.0689 1284.46 78.1067 1275.69 71.1467C1267.06 64.1867 1262.74 54.6489 1262.74 42.5333C1262.74 29.1289 1268.8 18.6889 1280.91 11.2133C1293.16 3.73778 1309.98 0 1331.37 0C1370.94 0 1393.11 13.8556 1397.88 41.5667L1358.25 45.4333C1356.19 39.7622 1352.96 35.7022 1348.58 33.2533C1344.2 30.6756 1338.01 29.3867 1330.02 29.3867C1321.51 29.3867 1314.94 30.4178 1310.3 32.48C1305.79 34.5422 1303.53 37.5067 1303.53 41.3733C1303.53 44.5956 1304.76 47.0444 1307.21 48.72C1309.66 50.3956 1314.17 51.7489 1320.74 52.78L1350.9 57.6133C1368.82 60.4489 1381.77 65.2822 1389.76 72.1133C1397.75 78.8156 1401.75 88.2889 1401.75 100.533C1401.75 115.227 1395.82 126.311 1383.96 133.787C1372.1 141.262 1354.64 145 1331.57 145C1286.2 145 1262.03 128.889 1259.07 96.6667H1300.05C1302.5 109.298 1313.07 115.613 1331.76 115.613C1350.84 115.613 1360.37 111.038 1360.37 101.887Z" fill="white"/>
+                        <path d="M1125.74 141.52H1083.4L1143.34 3.48013H1192.06L1251.99 141.52H1208.68L1198.44 116.387H1135.41L1125.74 141.52ZM1167.12 34.9935L1147.4 85.4535H1186.84L1167.12 34.9935Z" fill="white"/>
+                        <path d="M920.223 3.48013H957.343L1026.36 86.4201V3.48013H1065.8V141.52H1028.68L959.663 58.5801V141.52H920.223V3.48013Z" fill="white"/>
+                        <path d="M776.46 141.52H734.12L794.053 3.48013H842.773L902.707 141.52H859.4L849.153 116.387H786.127L776.46 141.52ZM817.833 34.9935L798.113 85.4535H837.553L817.833 34.9935Z" fill="white"/>
+                        <path d="M539.975 3.48013H587.148L628.715 96.8601L670.088 3.48013H716.295V141.52H678.015V61.0935L643.021 141.52H612.475L577.675 61.4801V141.52H539.975V3.48013Z" fill="white"/>
+                        <path d="M466.908 3.48013H508.668V141.52H466.908V3.48013Z" fill="white"/>
+                        <path d="M323.146 141.52H280.806L340.739 3.48013H389.459L449.392 141.52H406.086L395.839 116.387H332.812L323.146 141.52ZM364.519 34.9935L344.799 85.4535H384.239L364.519 34.9935Z" fill="white"/>
+                        <path d="M154.063 3.48013H195.823V107.687H274.316L270.063 141.52H154.063V3.48013Z" fill="white"/>
+                        <path d="M0 3.48013H68.6333C110.007 3.48013 130.693 19.3979 130.693 51.2335C130.693 67.6024 125.344 79.7179 114.647 87.5801C104.078 95.3135 87.9667 99.1801 66.3133 99.1801H40.4067V141.52H0V3.48013ZM90.0933 51.0401C90.0933 45.1113 88.16 40.8579 84.2933 38.2801C80.4267 35.7024 74.3044 34.4135 65.9267 34.4135H40.4067V68.2468H65.54C73.9178 68.2468 80.1044 66.9579 84.1 64.3801C88.0956 61.8024 90.0933 57.3557 90.0933 51.0401Z" fill="white"/>
+                    </svg>
+                </div>
+            </nav>
+            <!-- Main "nav" -->
+            <nav class="navbar-header">
+                <ul class="navbar flex">
+                    <li>women</li>
+                    <li>collections</li>
+                    <li class="editorial">editorial
+                        <div class="editorial-overlay">
+                            <div>
+                                <h3 style="font-size: 18px; font-weight: 700;">EDITORIAL</h3>
+                                <ul>
+                                    <li>A.S.C</li>
+                                    <li>BAZAAR</li>
+                                    <li>ELLE</li>
+                                    <li>GQ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>news</li>
+                    <li>stories</li>
+                </ul>
+            </nav>
+            <div class="login-header flex">
+                <div class="login-content">
+                    <a href="" class="sign-in link">SIGN IN</a>
+                </div>
+                <div>
+                    <a href="#" aria-label="cart">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.95833 6.41667V3.58333C9.95833 2.83189 9.65982 2.11122 9.12847 1.57986C8.59712 1.04851 7.87645 0.75 7.125 0.75C6.37355 0.75 5.65288 1.04851 5.12153 1.57986C4.59018 2.11122 4.29167 2.83189 4.29167 3.58333V6.41667M0.75 4.29167V12.0833C0.75 12.8348 1.04851 13.5554 1.57986 14.0868C2.11122 14.6182 2.83189 14.9167 3.58333 14.9167H10.6667C11.4181 14.9167 12.1388 14.6182 12.6701 14.0868C13.2015 13.5554 13.5 12.8348 13.5 12.0833V4.29167H0.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="logo-containter">
+        <svg viewBox="0 0 1402 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1360.37 101.887C1360.37 98.6645 1358.96 96.0867 1356.12 94.1533C1353.29 92.0911 1348.65 90.6089 1342.2 89.7067L1317.45 86.0333C1298.38 83.0689 1284.46 78.1067 1275.69 71.1467C1267.06 64.1867 1262.74 54.6489 1262.74 42.5333C1262.74 29.1289 1268.8 18.6889 1280.91 11.2133C1293.16 3.73778 1309.98 0 1331.37 0C1370.94 0 1393.11 13.8556 1397.88 41.5667L1358.25 45.4333C1356.19 39.7622 1352.96 35.7022 1348.58 33.2533C1344.2 30.6756 1338.01 29.3867 1330.02 29.3867C1321.51 29.3867 1314.94 30.4178 1310.3 32.48C1305.79 34.5422 1303.53 37.5067 1303.53 41.3733C1303.53 44.5956 1304.76 47.0444 1307.21 48.72C1309.66 50.3956 1314.17 51.7489 1320.74 52.78L1350.9 57.6133C1368.82 60.4489 1381.77 65.2822 1389.76 72.1133C1397.75 78.8156 1401.75 88.2889 1401.75 100.533C1401.75 115.227 1395.82 126.311 1383.96 133.787C1372.1 141.262 1354.64 145 1331.57 145C1286.2 145 1262.03 128.889 1259.07 96.6667H1300.05C1302.5 109.298 1313.07 115.613 1331.76 115.613C1350.84 115.613 1360.37 111.038 1360.37 101.887Z" fill="white"/>
+            <path d="M1125.74 141.52H1083.4L1143.34 3.48013H1192.06L1251.99 141.52H1208.68L1198.44 116.387H1135.41L1125.74 141.52ZM1167.12 34.9935L1147.4 85.4535H1186.84L1167.12 34.9935Z" fill="white"/>
+            <path d="M920.223 3.48013H957.343L1026.36 86.4201V3.48013H1065.8V141.52H1028.68L959.663 58.5801V141.52H920.223V3.48013Z" fill="white"/>
+            <path d="M776.46 141.52H734.12L794.053 3.48013H842.773L902.707 141.52H859.4L849.153 116.387H786.127L776.46 141.52ZM817.833 34.9935L798.113 85.4535H837.553L817.833 34.9935Z" fill="white"/>
+            <path d="M539.975 3.48013H587.148L628.715 96.8601L670.088 3.48013H716.295V141.52H678.015V61.0935L643.021 141.52H612.475L577.675 61.4801V141.52H539.975V3.48013Z" fill="white"/>
+            <path d="M466.908 3.48013H508.668V141.52H466.908V3.48013Z" fill="white"/>
+            <path d="M323.146 141.52H280.806L340.739 3.48013H389.459L449.392 141.52H406.086L395.839 116.387H332.812L323.146 141.52ZM364.519 34.9935L344.799 85.4535H384.239L364.519 34.9935Z" fill="white"/>
+            <path d="M154.063 3.48013H195.823V107.687H274.316L270.063 141.52H154.063V3.48013Z" fill="white"/>
+            <path d="M0 3.48013H68.6333C110.007 3.48013 130.693 19.3979 130.693 51.2335C130.693 67.6024 125.344 79.7179 114.647 87.5801C104.078 95.3135 87.9667 99.1801 66.3133 99.1801H40.4067V141.52H0V3.48013ZM90.0933 51.0401C90.0933 45.1113 88.16 40.8579 84.2933 38.2801C80.4267 35.7024 74.3044 34.4135 65.9267 34.4135H40.4067V68.2468H65.54C73.9178 68.2468 80.1044 66.9579 84.1 64.3801C88.0956 61.8024 90.0933 57.3557 90.0933 51.0401Z" fill="white"/>
+        </svg>
+    </div>
+
+    <!-- Main -->
+    <div class="section1">
+        <video src="asset/mockup_video576.mp4" width="100%" muted autoplay loop></video>
+    </div>
+    
+    <div class="spacer"></div>
+    <div class="section2">
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div class="section2-container">
+                <div class="text-overlay">
+                    <div class="section2-text">NEW</div>
+                </div>
+                <img src="asset/section2.jpg" alt="" class="section2-img">
+            </div>
+        </div>
+        <div class="section23-hv">
+            <p style="margin: 15px;"><b class="section23-description1">Sed egestas, nibh a condimentum imperdiet</b></p>
+            <p class="section23-description2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis <br>elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+        </div>
+    </div>  
+    
+    <div class="spacer"></div>
+    <div class="section3">
+        <div style="position: relative;">
+            <div class="text-overlay">
+                <div class="section3-text">BESTSELLER</div>
+            </div>
+            <div class="section3-video">
+                <video src="asset/DTS_THE_LEADER_Joey_Bania_Clips_ID10.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="section23-hv">
+            <p style="margin: 15px;"><b class="section23-description1">Sed egestas, nibh a condimentum imperdiet</b></p>
+            <p class="section23-description2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis <br>elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="section4">
+        <!-- <div class="section4-container1 collect4" style="position: relative; width: 978px; height: 475px;"> -->
+        <div class="section4-container1 collect4" style="position: relative;">
+            <div class="collect4-text">COLLECTION 01</div>
+            <!-- width="978px" height="475px" -->
+            <img src="asset/section4.jpg" alt="">
+            <video src="asset/DTS_THE_LEADER_Joey_Bania_Clips_ID11.mp4" class="collect4-hv" autoplay loop muted></video>
+        </div>
+
+        <div class="section4-container2">
+            <!-- width: 454px; height: 455px; -->
+            <!-- <div style="position: relative;  width: 454px; height: 455px;" class="collect4"> -->
+            <div style="position: relative;" class="collect4 collection-bg-1">
+                <div class="collect4-text">COLLECTION <br>02</div>
+                <!-- <img src="asset/collection4a-sm.jpg" alt=""> -->
+                <img src="asset/collection4-2hover.jpg" class="collect4-hv" alt="">
+            </div>
+            <!-- <div style="position: relative;  width: 454px; height: 455px;" class="collect4"> -->
+            <div style="position: relative;" class="collect4 collection-bg-2">
+                <div class="collect4-text">COLLECTION <br>03</div>
+                <!-- <img src="asset/collection4b-sm.jpg" alt=""> -->
+                <img src="asset/collection4-2hover.jpg" class="collect4-hv" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="section5">
+        <div class="scrolling-text">
+            <div class="scrolling-content">
+                <span>BEST SELLNG</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1667 38.9583V46.0416H56.6667V53.1249H63.75V46.0416H70.8334V38.9583H63.75V31.8749H56.6667V38.9583H14.1667ZM49.5834 24.7916H56.6667V31.8749H49.5834V24.7916ZM49.5834 24.7916H42.5V17.7083H49.5834V24.7916ZM49.5834 60.2083H56.6667V53.1249H49.5834V60.2083ZM49.5834 60.2083H42.5V67.2916H49.5834V60.2083Z" fill="white"/>
+                </svg>
+                <span>NEW ARRIVAL</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.8333 38.9583V46.0416H28.3333V53.1249H21.25V46.0416H14.1667V38.9583H21.25V31.8749H28.3333V38.9583H70.8333ZM35.4167 24.7916H28.3333V31.8749H35.4167V24.7916ZM35.4167 24.7916H42.5V17.7083H35.4167V24.7916ZM35.4167 60.2083H28.3333V53.1249H35.4167V60.2083ZM35.4167 60.2083H42.5V67.2916H35.4167V60.2083Z" fill="white"/>
+                </svg>
+                <span>BEST SELLNG</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1667 38.9583V46.0416H56.6667V53.1249H63.75V46.0416H70.8334V38.9583H63.75V31.8749H56.6667V38.9583H14.1667ZM49.5834 24.7916H56.6667V31.8749H49.5834V24.7916ZM49.5834 24.7916H42.5V17.7083H49.5834V24.7916ZM49.5834 60.2083H56.6667V53.1249H49.5834V60.2083ZM49.5834 60.2083H42.5V67.2916H49.5834V60.2083Z" fill="white"/>
+                </svg>
+                <span>NEW ARRIVAL</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.8333 38.9583V46.0416H28.3333V53.1249H21.25V46.0416H14.1667V38.9583H21.25V31.8749H28.3333V38.9583H70.8333ZM35.4167 24.7916H28.3333V31.8749H35.4167V24.7916ZM35.4167 24.7916H42.5V17.7083H35.4167V24.7916ZM35.4167 60.2083H28.3333V53.1249H35.4167V60.2083ZM35.4167 60.2083H42.5V67.2916H35.4167V60.2083Z" fill="white"/>
+                </svg>
+                <span>BEST SELLNG</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1667 38.9583V46.0416H56.6667V53.1249H63.75V46.0416H70.8334V38.9583H63.75V31.8749H56.6667V38.9583H14.1667ZM49.5834 24.7916H56.6667V31.8749H49.5834V24.7916ZM49.5834 24.7916H42.5V17.7083H49.5834V24.7916ZM49.5834 60.2083H56.6667V53.1249H49.5834V60.2083ZM49.5834 60.2083H42.5V67.2916H49.5834V60.2083Z" fill="white"/>
+                </svg>
+                <span>NEW ARRIVAL</span>
+                <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70.8333 38.9583V46.0416H28.3333V53.1249H21.25V46.0416H14.1667V38.9583H21.25V31.8749H28.3333V38.9583H70.8333ZM35.4167 24.7916H28.3333V31.8749H35.4167V24.7916ZM35.4167 24.7916H42.5V17.7083H35.4167V24.7916ZM35.4167 60.2083H28.3333V53.1249H35.4167V60.2083ZM35.4167 60.2083H42.5V67.2916H35.4167V60.2083Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="section6">
+        <div class="section6-content">
+            <div>
+                <p class="section6-header"><b>WORLDWIDE SHIPPING</b></p>
+                <p class="section6-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+            </div>
+            <div>
+                <p class="section6-header"><b>CUSTOMER SERVICE</b></p>
+                <p class="section6-text"><u>Lorem ipsum dolor sit amet</u>, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+            </div>
+            <div>
+                <p class="section6-header"><b>SECURE PAYMENT</b></p>
+                <p class="section6-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="section7">
+        <div class="spacer"></div>
+        <div class="section7-header">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <p style="padding: 10px 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.</p>
+        </div>
+        <div class="faq-tab">
+            <input type="radio" name="faq-group" id="tab-order">
+            <label for="tab-order">ORDERS</label>
+
+            <input type="radio" name="faq-group" id="tab-ship" checked>
+            <label for="tab-ship">SHIPPING</label>
+
+            <input type="radio" name="faq-group" id="tab-return">
+            <label for="tab-return">RETURNS & EXCHANGES</label>
+
+            <input type="radio" name="faq-group" id="tab-sizepro">
+            <label for="tab-sizepro">SIZING & PRODUCTS</label>
+        </div>
+        <div class="section7-faq">
+            <div class="faq-toggle">
+                <div class="toggle-ship">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq-q11" class="faq-check">
+                        
+                        <label for="faq-q11" class="toggle-content">
+                            <div class="toggle-text">DO YOU OFFER INTERNATIONAL SHIPPING?</div>
+                            <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </label>
+
+                        <div class="faq-answer">Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.</div>
+                    </div>
+                    <!-- toggle-between line [Start] -->
+                    <svg width="100%" height="1" viewBox="0 0 1093 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5H1093" stroke="white" stroke-opacity="0.2"/>
+                    </svg>
+                    <!-- toggle-between line [End] -->
+                    <div class="toggle-content">
+                        <div class="toggle-text">HOW LONG DOES DELIVERY TAKE?</div>
+                        <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- toggle-between line [Start] -->
+                    <svg width="100%" height="1" viewBox="0 0 1093 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5H1093" stroke="white" stroke-opacity="0.2"/>
+                    </svg>
+                    <!-- toggle-between line [End] -->
+                    <div class="toggle-content">
+                        <div class="toggle-text">HOW CAN I TRACK MY ORDER?</div>
+                        <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="toggle-return">
+                    <div class="faq-item">
+                        <input type="checkbox" id="faq-q21" class="faq-check">
+
+                        <label for="faq-q21" class="toggle-content">
+                            <div class="toggle-text">WHAT IS YOUR RETURN POLICY?</div>
+                            <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </label>
+
+                        <div class="faq-answer">Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.</div>
+                    </div>
+                    <!-- toggle-between line [Start] -->
+                    <svg width="100%" height="1" viewBox="0 0 1093 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5H1093" stroke="white" stroke-opacity="0.2"/>
+                    </svg>
+                    <!-- toggle-between line [End] -->
+                    <div class="toggle-content">
+                        <div class="toggle-text">CAN I ECHANGE FOR A DIFFERENT SIZE?</div>
+                        <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- toggle-between line [Start] -->
+                    <svg width="100%" height="1" viewBox="0 0 1093 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.5H1093" stroke="white" stroke-opacity="0.2"/>
+                    </svg>
+                    <!-- toggle-between line [End] -->
+                    <div class="toggle-content">
+                        <div class="toggle-text">ARE SALE ITEMS REFUNDABLE?</div>
+                        <svg class="arrow-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6508 7.31689L7.65076 1.31689L0.650757 7.31689" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="section8">
+        
+        <div class="section8-container">
+            <div class="section8-container-text">
+                <h2>MAME AN <br> INQURY</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Nam ornare, nisl non rhoncus <br>commodo.</p>
+            </div>
+            <form action="">
+                <div style="text-align: start; display: flex; gap: 20px; align-content: center;">
+                    <label class="custom-radio">
+                        <input type="radio" name="group-contact" id="contact-onsite" checked>
+                        <span class="radio-mark"></span> Onsite
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="group-contact" id="contact-hybrid">
+                        <span class="radio-mark"></span> Hybrid
+                    </label>
+                </div>
+
+                <div class="contact-input">
+                    <div class="contact-input-container">
+                        <div class="input-group">
+                            <input type="text" id="fullname" required placeholder=" ">
+                            <label for="fullname">Full name*</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" " value="Phaimanas@gmail.com">
+                            <label for="email">Email*</label>
+                        </div>
+                    </div>
+                    <div class="contact-input-container">
+                        <div class="input-group">
+                            <input type="tel" id="phone" required placeholder=" ">
+                            <label for="phone">Phone Number*</label>
+                        </div>
+                        <div class="input-group">
+                            <select id="select-subject" class="contact-custom-select" required>
+                                <option value="" selected disabled hidden></option>
+                                <option value="general">General inquiry</option>
+                                <option value="job">Job Application</option>
+                                <option value="media">Media & Press</option>
+                            </select>
+                            <label for="select-subject" class="select-label">Select Subject*</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="term-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkbox-mark"></span>
+                        <span>I agree to all terms & conditions</span>
+                    </label>
+                </div>
+                
+                <button class="submit-button">SEND</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <!-- footer -->
+    <div class="spacer"></div>
+    <div style="margin: 16px;">
+        <a href="#top" style="color: #000; text-decoration: none;">HOMEPAGE</a>
+    </div>
+    <footer>
+        <div style="width: 90%;">
+            <div class="footer-grid">
+                <div class="footer-content">
+                    <h3>ABOUT</h3>
+                    <a href="#" class="footer-link">Women</a>
+                    <a href="#" class="footer-link">Collections</a>
+                    <a href="#" class="footer-link">Ediorial</a>
+                    <a href="#" class="footer-link">Stories</a>
+                </div>
+                <div class="footer-content">
+                    <h3>HELP</h3>
+                    <a href="#" class="footer-link">Payment Notification</a>
+                    <a href="#" class="footer-link">Customer Service</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                <div class="footer-content">
+                    <h3>SOCIAL</h3>
+                    <a href="#" class="footer-link">Instagram</a>
+                    <a href="#" class="footer-link">Facebook</a>
+                </div>
+                <div class="footer-content">
+                    <h3>LEGAL</h3>
+                    <a href="#" class="footer-link">Terms & Condition</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Cookies Policy</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>NEWSLETTER</h3>
+                    <form action="">
+                        <div class="input-group" style="margin: 0; margin-top: 13px; margin-bottom: 20px;">
+                            <input type="email" id="contact-email" required placeholder=" " style="width: 100%; padding: 15px 10px 5px 0; border: none; border-bottom: #000600 1px solid;">
+                            <label for="contact-email">Email*</label>
+                        </div>
+                        <button class="subscribe-button">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>@PLAIMANAS</p>
+                <p>Web by ::*KITTIPHAT W.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
