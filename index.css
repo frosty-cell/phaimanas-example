@@ -4,24 +4,33 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
+
+/*  */
+.flex {
+    display: flex;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.link {
+    text-decoration: none;
+    color: #000;
+}
+.spacer {
+    height: 100px;
+}
+/*  */
 body {
     background-color: #FFF;
 }
 
-/*  */
 li {
     list-style-type: none;
 }
+/*  */
 
-header { 
-    width: 100%; height: 45px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: #FFF;
-}
-
+/* Navbar */
 .menu-toggle,
 .hamberger {
     display: none;
@@ -61,7 +70,6 @@ header {
     padding: 10px;
 }
 
-/*  */
 .editorial-check { display: none; }
 
 .editorial-label {
@@ -86,33 +94,23 @@ header {
     font-size: 18px; font-weight: 700;
 }
 
-
-/*  */
-.flex {
-    display: flex;
-}
-.center {
-    display: flex;
-    justify-content: center;
-}
-.link {
-    text-decoration: none;
-    color: #000;
-}
-.spacer {
-    height: 100px;
+/* Heaeder */
+header { 
+    width: 100%; height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #FFF;
 }
 
 
-/*  */
 .header {
-    /* width: 1440px; */
-    width: 90%;
+    width: 90%; /* width: 1440px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 24px;
-    /* position: fixed; */
     top: -10px;
     background-color: #FFF;
 }
@@ -177,7 +175,6 @@ header {
     transition: editorialEntry .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 .editorial-overlay {
-    /* display: none; */
     opacity: 0;
     visibility: hidden;
 
@@ -308,21 +305,15 @@ header {
 
 .section4-container1 img,
 .section4-container1 video {
-    /* width: 978px; height: 475px; */
     width: 978px; height: 475px;
 }
 .section4-container2 img {
-    /* width: 454px; height: 455px; */
     width: 454px; height: 455px;
 }
 
 .section4-container2 {
     display: flex; gap: 68px;
 }
-
-/* width: 346px; height: 167px;
-width: 161px; height: 161px; */
-
 
 .collect4:hover .collect4-hv {
     opacity: 1;
@@ -356,7 +347,6 @@ width: 161px; height: 161px; */
 .collection-bg-1,
 .collection-bg-2 {
     width: 454px; height: 455px;
-    /* width: 346px; height: 167px; */
     
     background-repeat: no-repeat;
     /* background-position: 50% 12%; */
