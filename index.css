@@ -30,7 +30,42 @@ li {
 }
 /*  */
 
-/* Navbar */
+/* Haader */
+.currency {
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+.custom-select:hover .currency{
+    color: #00000080;
+}
+
+.currency-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    margin-top: 10px;
+    top: 23px;
+    border: none;
+    z-index: 99;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+.custom-select:hover .currency-dropdown {
+    display: block;
+    padding: 12px;
+    cursor: default;
+}
+.currency-check:checked ~ .currency-dropdown {
+    display: flex;
+}
+
+.menu-toggle, .currency-check {
+    position: fixed;
+    opacity: 1;
+    left: 15%;
+}
+
 .menu-toggle,
 .hamberger {
     display: none;
@@ -49,11 +84,6 @@ li {
     display: none;
 }
 
-.menu-toggle, .currency-check {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
 
 .menu-toggle:checked ~ .navbar-overlay {
     display: flex;
@@ -102,7 +132,7 @@ li {
     font-size: 18px; font-weight: 700;
 }
 
-/* Heaeder */
+/* Heaeder > Navbar */
 header { 
     width: 100%; height: 45px;
     position: fixed;
@@ -121,34 +151,6 @@ header {
     margin: 24px;
     top: -10px;
     background-color: #FFF;
-}
-
-
-.currency {
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s ease;
-    cursor: default;
-}
-
-.custom-select:hover .currency{
-    color: #00000080;
-}
-.custom-select:hover .currency-dropdown {
-    display: block;
-    padding: 12px;
-    cursor: default;
-}
-
-.currency-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #FFF;
-    margin-top: 10px;
-    top: 23px;
-    border: none;
-    z-index: 99;
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
