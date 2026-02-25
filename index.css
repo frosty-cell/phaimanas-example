@@ -51,12 +51,6 @@ li {
     z-index: 99;
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.2);
 }
-.custom-select:hover .currency-dropdown,
-.currency-check:checked ~ .currency-dropdown {
-    display: block;
-    padding: 12px;
-    cursor: default;
-}
 
 .menu-toggle, .currency-check {
     position: fixed;
@@ -238,7 +232,11 @@ header {
 .logo-containter {
     /* default --> width: 1402px; height: 145px; top: 70px; */
     width: 97.36%; height: 145px;
-    position: fixed; top: 60px; pointer-events: none; z-index: 2; place-self: center;
+    position: fixed; 
+    top: 60px; 
+    pointer-events: none; 
+    z-index: 2; 
+    place-self: center;
     mix-blend-mode: difference;
 }
 
@@ -854,8 +852,23 @@ footer {
     }
 }
 
+/* mobile L == "min-width" 541px */
+@media screen and (min-width: 541px) {
+    .custom-select:hover .currency-dropdown {
+        display: block;
+        padding: 12px;
+        cursor: default;
+    }
+}
+
 /* mobile L == 541px */
 @media screen and (max-width: 541px) {
+    .currency-check:checked ~ .currency-dropdown {
+        display: block;
+        padding: 12px;
+        cursor: default;
+    }
+
     /* Heaeder */
     .navbar-header {
         display: none;
@@ -956,6 +969,10 @@ footer {
 
     .login-header {
         gap: 1rem;
+    }
+
+    .logo-containter {
+        left: 2%;
     }
 
     /* section 1 */
