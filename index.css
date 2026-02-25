@@ -62,7 +62,7 @@ li {
 
 .menu-toggle, .currency-check {
     position: fixed;
-    opacity: 1;
+    opacity: 0;
     left: 15%;
 }
 
