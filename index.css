@@ -97,7 +97,7 @@ li {
 .menu-toggle:checked ~ .navbar-overlay {
     display: flex;
     opacity: 1;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .logo-containter-overlay {
