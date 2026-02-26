@@ -67,9 +67,19 @@ li {
     left: 15%;
 }
 
-.menu-toggle,
-.hamberger {
+
+.menu-toggle, .hamberger {
     display: none;
+}
+.hamberger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: -14px; 
+}
+.menu-toggle:checked ~ .hamberger {
+    transition: all 0.1s ease;
+    margin-right: 0;
 }
 
 .navbar-overlay {
@@ -84,8 +94,6 @@ li {
     text-align: center;
     display: none;
 }
-
-
 .menu-toggle:checked ~ .navbar-overlay {
     display: flex;
     opacity: 1;
@@ -887,12 +895,7 @@ footer {
     .navbar-header {
         display: none;
     }
-    .hamberger {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-right: -14px; /* 26px middle*/
-    }
+
     .menu-toggle:checked + .hamberger svg:first-child {
         transform: translateY(5px) rotate(-45deg);
     }
@@ -968,12 +971,7 @@ footer {
     .navbar-header {
         display: none;
     }
-    .hamberger {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-right: -14px; /* 26px middle*/
-    }
+
     .menu-toggle:checked + .hamberger svg:first-child {
         transform: translateY(5px) rotate(-45deg);
     }
