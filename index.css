@@ -75,11 +75,17 @@ li {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-right: -14px; 
+    /* margin-right: -14px;  */
 }
 .menu-toggle:checked ~ .hamberger {
     transition: all 0.1s ease;
     margin-right: 0;
+}
+.menu-toggle:checked + .hamberger svg:first-child {
+    transform: translateY(5px) rotate(-45deg);
+}
+.menu-toggle:checked + .hamberger svg:last-child {
+    transform: translateY(-4px) rotate(45deg);
 }
 
 .navbar-overlay {
@@ -897,13 +903,6 @@ footer {
         display: none;
     }
 
-    .menu-toggle:checked + .hamberger svg:first-child {
-        transform: translateY(5px) rotate(-45deg);
-    }
-    .menu-toggle:checked + .hamberger svg:last-child {
-        transform: translateY(-4px) rotate(45deg);
-    }
-
     .login-header {
         gap: 1rem;
     }
@@ -971,13 +970,6 @@ footer {
     /* Heaeder */
     .navbar-header {
         display: none;
-    }
-
-    .menu-toggle:checked + .hamberger svg:first-child {
-        transform: translateY(5px) rotate(-45deg);
-    }
-    .menu-toggle:checked + .hamberger svg:last-child {
-        transform: translateY(-4px) rotate(45deg);
     }
 
     .login-header {
